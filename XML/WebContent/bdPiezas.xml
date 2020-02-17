@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+     PIEZAS(Código,nombre) 
+     PROVEEDOR(id, nombre)
+     SUMINISTROS(Código_Pieza,idProveedor,precio)
+      <!DOCTYPE bdPiezas SYSTEM "bdPiezas.dtd"> -->
+<bdPiezas xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNameSpaceSchemaLocation="bdPiezas.xsd">
+<piezas>
+    <pieza codigo="1" nombre="Martillo"/>
+</piezas>
+<proveedores>
+    <proveedor id="1" nombre="Fabrica nuñez"/>
+</proveedores>
+<suministros>
+    <suministra codigo_pieza="1" idProveedor="1" precio="20.9"/> 
+</suministros>
+</bdPiezas>
+ 

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<personas xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="chuleta.xsd">
+	<persona>
+		<nombre>Luis</nombre> <!-- simple y de tipo xs:string --> <!-- simpleContent -->
+		<coche matricula="3399XYZ">Ford</coche> <!-- elemento con contenido simple y atributo -->
+		<fechaNac> <!-- elemento compuesto y sin atributos -->
+			<día>01</día> <!-- [1,31] -->
+			<mes>12</mes> <!--  [1,12] -->
+			<año>1971</año>
+		</fechaNac>
+		<curso nivel="1" ciclo="DAW"> <!-- elemento compuesto y con atributos -->
+			<!-- ciclo=daw, asir, smr -->
+			<!-- nivel=[1,2] -->
+			<nombre>Programación en Java</nombre>
+			<nombre>LMSGI</nombre>
+			<!-- nombre de asignatura válidos son PRG, LMSGI, SI, BD, ED, FOL -->
+		</curso>
+		<expediente num="12344" fechaApertura="2019-09-01"/> <!-- elemento vacío con atributos -->
+	</persona>
+</personas>

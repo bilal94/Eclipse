@@ -1,0 +1,23 @@
+<!ELEMENT bdFacultades (facultades,investigadores,equipos,reservas)>
+    <!ELEMENT facultades (facultad*)>
+        <!ELEMENT facultad EMPTY>
+            <!ATTLIST facultad codigo CDATA #REQUIRED
+                                nombre NMTOKENS #REQUIRED>
+    <!ELEMENT investigadores (investigador*)>
+        <!ELEMENT investigador EMPTY>
+            <!ATTLIST investigador dni CDATA #REQUIRED
+                                nomApell NMTOKENS #REQUIRED
+                                facultad NMTOKENS #REQUIRED>
+    <!ELEMENT equipos (equipo*)>
+        <!ELEMENT equipo EMPTY>
+            <!ATTLIST equipo numSerie CDATA #REQUIRED
+                                 nombre CDATA #REQUIRED
+                                 facultad NMTOKENS #REQUIRED>
+    <!ELEMENT reservas (reserva*)>
+        <!ELEMENT reserva EMPTY>
+            <!ATTLIST reserva dni CDATA #REQUIRED
+                              numSerie CDATA #REQUIRED
+                              comienzo NMTOKEN #REQUIRED
+                              fin NMTOKEN #REQUIRED>
+            
+                            

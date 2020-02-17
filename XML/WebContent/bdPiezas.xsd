@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns:xs="http://www.w3.org/2001/XMLSchema" version="0.1" xml:lang="es">
+	<xs:element name="bdPiezas">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="piezas" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                       <xs:sequence>
+                           <xs:element name="pieza">
+                               <xs:complexType>
+                                    <xs:attribute name="codigo" type="xs:int"/>
+                                    <xs:attribute name="nombre" type="xs:string"/>
+                               </xs:complexType>
+                           </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="proveedores" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="proveedor">
+                                <xs:complexType>
+                                    <xs:attribute name="id" type="xs:int"/>
+                                    <xs:attribute name="nombre" type="xs:string"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="suministros" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="suministra">
+                                <xs:complexType>
+                                    <xs:attribute name="codigo_pieza" type="xs:int"/>
+                                    <xs:attribute name="id_proveedor" type="xs:string"/>
+                                    <xs:attribute name="precio" type="xs:decimal"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+	   </xs:element>
+</schema>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" version="0.1" xml:lang="es" >
+    <xs:element name="bdFacultades">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="facultades">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="facultad" minOccurs="1" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:attribute name="codigo" type="xs:integer"/>
+                                    <xs:attribute name="nombre" type="xs:string"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="investigadores">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="investigador" minOccurs="1" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:attribute name="dni" type="xs:string"/>
+                                    <xs:attribute name="nomApell" type="xs:string"/>
+                                    <xs:attribute name="facultad" type="xs:string"/>
+                                </xs:complexType>
+                            </xs:element>                     
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="equipos">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="equipo" minOccurs="1" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:attribute name="numSerie" type="xs:int"/>
+                                    <xs:attribute name="nombre" type="xs:string"/>
+                                    <xs:attribute name="facultad" type="xs:string"/>
+                                </xs:complexType>
+                            </xs:element>                     
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                 <xs:element name="reservas">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="reserva" minOccurs="1" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:attribute name="dni" type="xs:string"/>
+                                    <xs:attribute name="numSerie" type="xs:string"/>
+                                    <xs:attribute name="comienzo" type="xs:date"/>
+                                    <xs:attribute name="fin" type="xs:date"/>
+                                </xs:complexType>
+                            </xs:element>                     
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</schema>
